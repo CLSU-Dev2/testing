@@ -22,7 +22,6 @@ $(document).ready(function() {
         return regex.test(data)
     }
 
-
     
     $("form").submit(function(event) {
 
@@ -172,4 +171,7 @@ $(document).ready(function() {
     })
 
     
+    
+
+
 })

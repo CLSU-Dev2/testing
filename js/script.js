@@ -146,6 +146,7 @@ $(document).ready(function() {
 
     $("#btnToggleModal").click(function(){
         $(".modal-addresses").css("display", "block")
+        console.log("hello")
     })
 
     $("#btnClose").click(function(){

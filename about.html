@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+
+    <link rel="stylesheet" href="css/index.css" />
+
+</head>
+
+<body>
+
+    <div class="container-fluid bg-dark mb-4">
+        <div class="row">
+            <div class="col p-3">
+                <span class="h1 text-white"> Address Book </span>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-2">
+        <div class="row ">
+            <div class="col-6">
+                <span class="h3">Contacts </span>
+            </div>
+            <div class="col-6 text-end">
+                <button class="btn btn-dark" id="btnToggleModal">Create New Contact</button>
+            </div>
+        </div>
+    </div>
+    <div class="container ">
+        <div class="table-responsive shadow rounded">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Name</th>
+                        <th>Address</th>
+                        <th>Telephone</th>
+                        <th>Email</th>
+                        <th>Website</th>
+                        <th>Option</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Martin De Guzman</td>
+                        <td>084, Brgy. Landig, Cuyapo, N.E</td>
+                        <td>0912 345 6789</td>
+                        <td>mdeg.0026@gmail.com</td>
+                        <td>www.xxx.com</td>
+                        <td>
+                            <button class="btn"><i class="bi bi-pencil-square"></i>Edit</button>
+                            <br />
+                            <button class="btn"><i class="bi bi-trash"></i>Delete</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Martin De Guzman</td>
+                        <td>084, Brgy. Landig, Cuyapo, N.E</td>
+                        <td>0912 345 6789</td>
+                        <td>mdeg.0026@gmail.com</td>
+                        <td>www.xxx.com</td>
+                        <td>
+                            <button class="btn"><i class="bi bi-pencil-square"></i>Edit</button>
+                            <br />
+                            <button class="btn"><i class="bi bi-trash"></i>Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <div class="modal-addresses">
+
+        <div class="modal-addresses-wrapper px-5 py-5">
+
+            <span class="btnClose" id="btnClose">&times;</span>
+
+            <div class="modal-header-addresses">
+                <h3 class="fw-bold text-center text-uppercase">Create contact address</h3>
+            </div>
+
+            <hr class="my-4 mt-5">
+
+
+            <form>
+                <div class="modal-body-address">
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="form-group mb-3">
+                                <label for="getFirstname" class="mb-2">Firstname</label>
+                                <input type="text" class="form-control" name="getFirstname" id="getFirstname" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="form-group mb-3">
+                                <label for="getMiddlename" class="mb-2">Middlename</label>
+                                <input type="text" class="form-control" name="getMiddlename" id="getMiddlename" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="col-4">
+                            <div class="form-group mb-3">
+                                <label for="getLastname" class="mb-2">Lastname</label>
+                                <input type="text" class="form-control" name="getLastname" id="getLastname" autocomplete="off">
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="row">
+
+                        <div class="col-7">
+                            <div class="form-group mb-3">
+                                <label for="getEmail" class="mb-2">Email</label>
+                                <input type="text" class="form-control" name="getEmail" id="getEmail" autocomplete="off">
+                            </div>
+                        </div>
+
+                        <div class="col-5">
+                            <div class="form-group mb-3">
+                                <label for="getTelephone" class="mb-2">Telephone</label>
+                                <input type="text" class="form-control" name="getTelephone" id="getTelephone" autocomplete="off">
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+
+                    <div class="form-group mb-3">
+                        <label for="getWebsite" class="mb-2">Website</label>
+                        <input type="text" class="form-control" name="getWebsite" id="getWebsite" autocomplete="off">
+                    </div>
+
+
+                    <div class="form-group mb-3">
+                        <label for="getAddress" class="mb-2">Address</label>
+                        <textarea name="getAddress" id="getAddress" rows="4" class="form-control"></textarea>
+                    </div>
+
+                </div>
+
+
+                <hr>
+
+                <button class="btn btn-success w-100 p-2 text-uppercase" id="btnSubmitRecord" name="btnSubmitRecord">Add record</button>
+
+            </form>
+        </div>
+
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/script.js"></script>
+
+</html>

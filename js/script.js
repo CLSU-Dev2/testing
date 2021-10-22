@@ -150,6 +150,24 @@ $(document).ready(function() {
     })
 
     $("#btnClose").click(function(){
+        $("#getFirstname").parent().find("small").remove()
+        $("#getMiddlename").parent().find("small").remove()
+        $("#getLastname").parent().find("small").remove()
+        $("#getEmail").parent().find("small").remove()
+        $("#getTelephone").parent().find("small").remove()
+        $("#getWebsite").parent().find("small").remove()
+        $("#getAddress").parent().find("small").remove()
+
+        
+        $("#getFirstname").removeClass("is-invalid")
+        $("#getMiddlename").removeClass("is-invalid")
+        $("#getLastname").removeClass("is-invalid")
+        $("#getEmail").removeClass("is-invalid")
+        $("#getTelephone").removeClass("is-invalid")
+        $("#getWebsite").removeClass("is-invalid")
+        $("#getAddress").removeClass("is-invalid")
+
+
         $(".modal-addresses").css("display", "none")
     })
 

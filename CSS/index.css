@@ -2,3 +2,66 @@
     box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
 }
+
+.modal-addresses {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.modal-addresses-wrapper {
+    display: block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 850px;
+    height: fit-content;
+    background-color: #fff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, .3);
+    border-radius: 4px;
+    animation-name: animateModal;
+    animation-duration: .8s;
+}
+
+@keyframes animateModal {
+    0% {
+        top: 30%;
+        opacity: 0;
+    } 100% {
+        top: 50%;
+        opacity: 1;
+    }
+}
+
+.btnClose {
+    display: block;
+    position: absolute;
+    font-size: 35px;
+    top: .2rem;
+    right: 1.2rem;
+    cursor: pointer;
+    color: #bcbcbc;
+}
+
+.btnClose:hover {
+    color: #000;
+}
+
+.modal-addresses-header {
+    padding: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.form-group label {
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.form-group textarea {
+    resize: none;
+}
